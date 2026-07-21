@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,4 +15,155 @@ body {
 a {
     color: #ffffff;
     text-decoration: none;
+}
+
+:root {
+    --e45b20: #e45b20;
+    --f48b2c: #f48b2c;
+    --1b232d: #1b232d;
+    --f7540f: #f7540f;
+    --994a2b: #994a2b;
+    --eaad5a: #eaad5a;
+    --606a70: #606a70;
+    --de8a4f: #de8a4f;
+    --331308: #331308;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #606a70;
+    color: #ffffff;
+}
+
+.container {
+    max-width: auto;
+    margin: 0 auto;
+}
+
+.container-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.container-slider {
+    display: flex;
+    place-items: center;
+    place-content: center;
+    gap: 1rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+a {
+    color: #f7540f;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.logo {
+    border-radius: 50%;
+    font-size: 0.5rem;
+    color: #f7540f;
+    width: 80px;
+}
+
+.nav-main {
+    color: #f7540f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #1b232d;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-menu-right {
+    list-style: none;
+}
+
+.content {
+    display: grid;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: #e45b20;
+}
+
+div {
+    border-color: #f7540f;
+    border-width: 2px;
+    border-style: solid;
+}
+
+/* Estilo básico para la galería */
+figure {
+    margin: 0;
+}
+
+#gallery {
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-container {
+    display: flex;
+    gap: 2rem;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+}
+
+/* Navegación de la galería */
+.gallery-navigation {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 40px);
+    margin: 0 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.nav-button {
+    background-color: rgba(0, 0, 0, .3);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.nav-button>span {
+    font-size: 30px;
+}
+
+.nav-button:hover {
+    background-color: #005f5f;
 }
