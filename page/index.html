@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,3 +41,95 @@
     </div>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- CUSTOM CSS-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="container">
+        <nav class="nav-main">
+            <img src="images\logo-non-letters.jpg" alt="Logo" class="logo">
+            <ul class="nav-menu">
+                <li>
+                    <a href="#">inicio</a>
+                </li>
+                <li>
+                    <a href="#">about us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container-slider">
+        <section id="gallery">
+            <div class="gallery-container">
+                <figure class="gallery-item">
+                    <img src="https://wallpapers.com/images/hd/fps-games-1920-x-1080-wallpaper-a3h285mpzfcin806.jpg"
+                        alt="Imagen 1">
+                    <!--             <figcaption>Descripción de la imagen 1</figcaption> -->
+                </figure>
+                <figure class="gallery-item">
+                    <img src="https://wallpapers.com/images/hd/fps-3840-x-2160-wallpaper-e3ybws0xpc26e9em.jpg"
+                        alt="Imagen 2">
+                    <!--             <figcaption>Descripción de la imagen 2</figcaption> -->
+                </figure>
+                <figure class="gallery-item">
+                    <img src="https://imagenes.hobbyconsolas.com/files/image_1920_1080/uploads/imagenes/2023/04/25/690d54f23b597.jpeg"
+                        alt="Imagen 3">
+                    <!--             <figcaption>Descripción de la imagen 3</figcaption> -->
+                </figure>
+            </div>
+            <nav class="gallery-navigation">
+                <button class="nav-button prev-button"><span>&#60;</span></button>
+                <button class="nav-button next-button"><span>&#62;</span></button>
+            </nav>
+        </section>
+    </div>
+
+    <div class="container-content">
+        <div class="content">
+            <h1>Welcome to FPS Reviews</h1>
+            <p>Discover the latest and greatest first-person shooter games, read reviews, and stay updated with the
+                gaming community.</p>
+        </div>
+        <div class="content">
+            <h2>Featured Reviews</h2>
+            <p>Check out our in-depth reviews of the hottest FPS titles on the market.</p>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+<script>
+    let currentIndex = 0;
+
+    document.querySelector('.prev-button').addEventListener('click', () => {
+        navigate(-1);
+    });
+
+    document.querySelector('.next-button').addEventListener('click', () => {
+        navigate(1);
+    });
+
+    function navigate(direction) {
+        const galleryContainer = document.querySelector('.gallery-container');
+        const totalImages = document.querySelectorAll('.gallery-item').length;
+
+        currentIndex = (currentIndex + direction + totalImages) % totalImages;
+        const offset = -currentIndex * 100;
+
+        galleryContainer.style.transform = `translateX(${offset}%)`;
+    }
+</script>
+>>>>>>> eb1e734 (update home page with minimal changes.)
