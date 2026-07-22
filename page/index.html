@@ -7,26 +7,35 @@
     <title>Document</title>
     <!-- FONT AWESOME-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- GOOGLE FONTS: Rajdhani (display/técnica) + Barlow (texto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
     <!-- CUSTOM CSS-->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header class="container">
-        <nav class="nav-main">
-            <img src="images/logo-non-letters.jpg" alt="FPS Reviews logo" class="logo">
+    <header class="site-header">
+        <nav class="nav-main container">
+            <div class="brand">
+                <img src="images/logo-non-letters.jpg" alt="FPS Reviews logo" class="logo">
+                <span class="brand-name">FPS<em>Reviews</em></span>
+            </div>
             <ul class="nav-menu">
                 <li>
-                    <a href="#">inicio</a>
+                    <a href="#" class="nav-link active">inicio</a>
                 </li>
                 <li>
-                    <a href="#">about us</a>
+                    <a href="#" class="nav-link">about us</a>
                 </li>
             </ul>
+            <span class="hud-status"><i class="fas fa-circle"></i> live</span>
         </nav>
     </header>
-    <div class="container-slider">
+    <div class="container-slider container">
         <section id="gallery">
+            <span class="hud-tag"><i class="fas fa-satellite-dish"></i> live feed // fps gallery</span>
             <div class="gallery-container">
                 <figure class="gallery-item">
                     <img src="https://wallpapers.com/images/hd/fps-games-1920-x-1080-wallpaper-a3h285mpzfcin806.jpg"
@@ -42,46 +51,29 @@
                 </figure>
             </div>
             <nav class="gallery-navigation">
-                <button class="nav-button prev-button" aria-label="Imagen anterior"><span>&#60;</span></button>
-                <button class="nav-button next-button" aria-label="Imagen siguiente"><span>&#62;</span></button>
+                <button class="nav-button prev-button" aria-label="Imagen anterior"><i class="fas fa-chevron-left"></i></button>
+                <button class="nav-button next-button" aria-label="Imagen siguiente"><i class="fas fa-chevron-right"></i></button>
             </nav>
+            <div class="gallery-dots" role="tablist" aria-label="Seleccionar imagen"></div>
         </section>
     </div>
 
-    <div class="container-content">
+    <div class="container-content container">
         <div class="content">
+            <span class="eyebrow"><i class="fas fa-crosshairs"></i> mission briefing</span>
             <h1>Welcome to FPS Reviews</h1>
             <p>Discover the latest and greatest first-person shooter games, read reviews, and stay updated with the
                 gaming community.</p>
+            <a href="#" class="cta">Explore reviews <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="content">
+            <span class="eyebrow"><i class="fas fa-star"></i> featured</span>
             <h2>Featured Reviews</h2>
             <p>Check out our in-depth reviews of the hottest FPS titles on the market.</p>
+            <a href="#" class="cta">See top picks <i class="fas fa-arrow-right"></i></a>
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
 
 </html>
-
-
-<script>
-    let currentIndex = 0;
-
-    document.querySelector('.prev-button').addEventListener('click', () => {
-        navigate(-1);
-    });
-
-    document.querySelector('.next-button').addEventListener('click', () => {
-        navigate(1);
-    });
-
-    function navigate(direction) {
-        const galleryContainer = document.querySelector('.gallery-container');
-        const totalImages = document.querySelectorAll('.gallery-item').length;
-
-        currentIndex = (currentIndex + direction + totalImages) % totalImages;
-        const offset = -currentIndex * 100;
-
-        galleryContainer.style.transform = `translateX(${offset}%)`;
-    }
-</script>
