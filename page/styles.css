@@ -670,6 +670,170 @@ figure {
 }
 
 /* ==========================================================================
+   FILTER BAR
+   ========================================================================== */
+
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0 1rem 2rem;
+}
+
+.filter-chip {
+    font-family: var(--font-display);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    color: #e8e2da;
+    background-color: transparent;
+    border: 1px solid rgba(234, 173, 90, 0.35);
+    border-radius: 999px;
+    padding: 0.45rem 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.filter-chip:hover,
+.filter-chip:focus-visible {
+    border-color: var(--eaad5a);
+    color: var(--eaad5a);
+}
+
+.filter-chip.active {
+    background-color: var(--f7540f);
+    border-color: var(--f7540f);
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   REVIEW GRID / CARDS
+   ========================================================================== */
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 0 1rem 4rem;
+}
+
+.review-card {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: rgba(27, 35, 45, 0.6);
+    border: 1px solid rgba(234, 173, 90, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+}
+
+.review-thumb {
+    position: relative;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0 2px, transparent 2px 14px),
+        linear-gradient(155deg, var(--e45b20) 0%, var(--994a2b) 100%);
+}
+
+.review-thumb i {
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.score-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--eaad5a);
+    background-color: rgba(20, 14, 10, 0.75);
+    border: 1px solid rgba(234, 173, 90, 0.5);
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+}
+
+.score-badge small {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.review-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    flex: 1;
+}
+
+.review-body .eyebrow {
+    background-color: transparent;
+    border: 1px solid rgba(234, 173, 90, 0.4);
+    color: var(--eaad5a);
+    padding: 0.25rem 0.55rem;
+}
+
+.review-body h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.15rem;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+}
+
+.review-body p {
+    font-size: 0.92rem;
+    color: rgba(242, 237, 231, 0.85);
+    flex: 1;
+}
+
+.review-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.78rem;
+    color: rgba(242, 237, 231, 0.6);
+    padding: 0.5rem 0;
+    border-top: 1px solid rgba(234, 173, 90, 0.15);
+    border-bottom: 1px solid rgba(234, 173, 90, 0.15);
+}
+
+.review-body .cta {
+    color: var(--eaad5a);
+    border-bottom-color: rgba(234, 173, 90, 0.5);
+    margin-top: 0.25rem;
+}
+
+.review-body .cta:hover,
+.review-body .cta:focus-visible {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.no-results {
+    text-align: center;
+    padding: 2rem 1rem 4rem;
+    color: rgba(242, 237, 231, 0.7);
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ==========================================================================
    RESPONSIVE
    ========================================================================== */
 
@@ -745,6 +909,10 @@ figure {
         grid-template-columns: 1fr;
     }
 
+    .review-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .profile-card {
         flex-direction: column;
         text-align: center;
@@ -806,5 +974,18 @@ figure {
 
     .profile-avatar i {
         font-size: 2.4rem;
+    }
+
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-bar {
+        gap: 0.5rem;
+    }
+
+    .filter-chip {
+        font-size: 0.72rem;
+        padding: 0.4rem 0.85rem;
     }
 }

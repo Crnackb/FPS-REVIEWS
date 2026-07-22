@@ -48,6 +48,37 @@ if (galleryContainer) {
 }
 
 // ============================================================
+// FILTROS DE RESEÑAS (solo corre si la página tiene .filter-bar)
+// ============================================================
+const filterBar = document.querySelector('.filter-bar');
+
+if (filterBar) {
+    const filterChips = filterBar.querySelectorAll('.filter-chip');
+    const reviewCards = document.querySelectorAll('.review-card');
+    const noResults = document.querySelector('.no-results');
+
+    filterChips.forEach((chip) => {
+        chip.addEventListener('click', () => {
+            filterChips.forEach((c) => c.classList.remove('active'));
+            chip.classList.add('active');
+
+            const filter = chip.dataset.filter;
+            let visibleCount = 0;
+
+            reviewCards.forEach((card) => {
+                const matches = filter === 'all' || card.dataset.genre === filter;
+                card.hidden = !matches;
+                if (matches) visibleCount++;
+            });
+
+            if (noResults) {
+                noResults.hidden = visibleCount !== 0;
+            }
+        });
+    });
+}
+
+// ============================================================
 // MENÚ HAMBURGUESA (nav mobile)
 // ============================================================
 const navToggle = document.getElementById('nav-toggle');
