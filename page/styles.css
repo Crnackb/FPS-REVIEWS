@@ -1,22 +1,4 @@
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background: #000000;
-    color: #ffffff;
-}
-
-a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
 :root {
     --e45b20: #e45b20;
     --f48b2c: #f48b2c;
