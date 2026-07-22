@@ -156,6 +156,46 @@ a {
     animation: pulse 1.8s ease-in-out infinite;
 }
 
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid rgba(234, 173, 90, 0.4);
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--eaad5a);
+    transition: transform 0.25s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.nav-toggle:hover,
+.nav-toggle:focus-visible {
+    border-color: var(--f7540f);
+}
+
+.nav-toggle.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
 /* ==========================================================================
    GALLERY / HERO
    ========================================================================== */
@@ -642,6 +682,48 @@ figure {
 
     .nav-menu {
         gap: 1rem;
+    }
+
+    .nav-toggle {
+        display: flex;
+        order: 2;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        background-color: rgba(27, 35, 45, 0.97);
+        border-bottom: 1px solid rgba(234, 173, 90, 0.25);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .nav-menu.open {
+        max-height: 260px;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 0.9rem 1rem;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    .hud-status {
+        order: 1;
     }
 
     .hud-status {
