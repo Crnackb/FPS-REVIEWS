@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - FPS Reviews</title>
+    <!-- FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- GOOGLE FONTS: Rajdhani (display/técnica) + Barlow (texto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- CUSTOM CSS-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="nav-main container">
+            <div class="brand">
+                <img src="images/logo-non-letters.jpg" alt="FPS Reviews logo" class="logo">
+                <span class="brand-name">FPS<em>Reviews</em></span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li>
+                    <a href="index.html" class="nav-link">inicio</a>
+                </li>
+                <li>
+                    <a href="reviews.html" class="nav-link active">reviews</a>
+                </li>
+                <li>
+                    <a href="about.html" class="nav-link">about us</a>
+                </li>
+            </ul>
+            <span class="hud-status"><i class="fas fa-circle"></i> live</span>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <section class="page-hero container">
+        <span class="eyebrow"><i class="fas fa-clipboard-list"></i> reviews</span>
+        <h1>Verified By <span>Playtime</span></h1>
+        <p>Every score below comes from finished campaigns and real hours in multiplayer — no early-access hype,
+            no press-kit copy.</p>
+    </section>
+
+    <div class="filter-bar container" role="group" aria-label="Filtrar reseñas por género">
+        <button class="filter-chip active" data-filter="all">All</button>
+        <button class="filter-chip" data-filter="tactical">Tactical</button>
+        <button class="filter-chip" data-filter="arena">Arena</button>
+        <button class="filter-chip" data-filter="competitive">Competitive</button>
+        <button class="filter-chip" data-filter="co-op">Co-op</button>
+    </div>
+
+    <section class="review-grid container">
+
+        <article class="review-card" data-genre="tactical">
+            <div class="review-thumb">
+                <i class="fas fa-crosshairs"></i>
+                <span class="score-badge">9.2<small>/10</small></span>
+            </div>
+            <div class="review-body">
+                <span class="eyebrow">tactical</span>
+                <h3>Call of Duty: Modern Warfare III</h3>
+                <p>A tightly-tuned multiplayer loop carries a forgettable campaign. The gunplay is the best in the
+                    series in years.</p>
+                <div class="review-meta">
+                    <span><i class="fas fa-desktop"></i> PC / PS5 / Xbox</span>
+                    <span><i class="far fa-calendar"></i> 2023</span>
+                </div>
+                <a href="#" class="cta">Read full review <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </article>
+
+        <article class="review-card" data-genre="arena">
+            <div class="review-thumb">
+                <i class="fas fa-fire"></i>
+                <span class="score-badge">9.6<small>/10</small></span>
+            </div>
+            <div class="review-body">
+                <span class="eyebrow">arena</span>
+                <h3>DOOM Eternal</h3>
+                <p>Relentless, brutal, and precise. The push-forward combat loop still hasn't been matched by
+                    anything else in the genre.</p>
+                <div class="review-meta">
+                    <span><i class="fas fa-desktop"></i> PC / Console</span>
+                    <span><i class="far fa-calendar"></i> 2020</span>
+                </div>
+                <a href="#" class="cta">Read full review <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </article>
+
+        <article class="review-card" data-genre="competitive">
+            <div class="review-thumb">
+                <i class="fas fa-bomb"></i>
+                <span class="score-badge">8.9<small>/10</small></span>
+            </div>
+            <div class="review-body">
+                <span class="eyebrow">competitive</span>
+                <h3>Counter-Strike 2</h3>
+                <p>The engine upgrade finally modernizes the smoke and lighting, but the core round-based tension is
+                    exactly as sharp as ever.</p>
+                <div class="review-meta">
+                    <span><i class="fas fa-desktop"></i> PC</span>
+                    <span><i class="far fa-calendar"></i> 2023</span>
+                </div>
+                <a href="#" class="cta">Read full review <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </article>
+
+        <article class="review-card" data-genre="competitive">
+            <div class="review-thumb">
+                <i class="fas fa-bullseye"></i>
+                <span class="score-badge">9.0<small>/10</small></span>
+            </div>
+            <div class="review-body">
+                <span class="eyebrow">competitive</span>
+                <h3>Valorant</h3>
+                <p>Abilities layered over gunplay without breaking it. The agent roster keeps every match feeling
+                    different, patch after patch.</p>
+                <div class="review-meta">
+                    <span><i class="fas fa-desktop"></i> PC</span>
+                    <span><i class="far fa-calendar"></i> 2020</span>
+                </div>
+                <a href="#" class="cta">Read full review <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </article>
+
+        <article class="review-card" data-genre="tactical">
+            <div class="review-thumb">
+                <i class="fas fa-satellite-dish"></i>
+                <span class="score-badge">7.8<small>/10</small></span>
+            </div>
+            <div class="review-body">
+                <span class="eyebrow">tactical</span>
+                <h3>Halo Infinite</h3>
+                <p>The sandbox and movement feel great, but content droughts kept this from becoming the comeback
+                    the series needed.</p>
+                <div class="review-meta">
+                    <span><i class="fas fa-desktop"></i> PC / Xbox</span>
+                    <span><i class="far fa-calendar"></i> 2021</span>
+                </div>
+                <a href="#" class="cta">Read full review <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </article>
+
+        <article class="review-card" data-genre="co-op">
+            <div class="review-thumb">
+                <i class="fas fa-users"></i>
+                <span class="score-badge">8.4<small>/10</small></span>
+            </div>
+            <div class="review-body">
+                <span class="eyebrow">co-op</span>
+                <h3>Helldivers 2</h3>
+                <p>Chaotic squad-based warfare that turns friendly fire into a running joke. Best played with three
+                    friends and zero communication discipline.</p>
+                <div class="review-meta">
+                    <span><i class="fas fa-desktop"></i> PC / PS5</span>
+                    <span><i class="far fa-calendar"></i> 2024</span>
+                </div>
+                <a href="#" class="cta">Read full review <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </article>
+
+    </section>
+
+    <p class="no-results container" hidden>No reviews match this filter yet.</p>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 <strong>FPS Reviews</strong>. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
